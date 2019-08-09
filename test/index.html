@@ -280,12 +280,10 @@
 	<script>
 		$('.menu-icon').on('click', function() {
 			event.preventDefault();
-			$('.menu').css({
-				display: 'block',
-			});
-			$('.menu-icon').css({
-				display: 'none',
-			});
+			$('.menu').slideToggle();
+			$('.menu-icon').toggleClass("menu-icon_toggle");
+			$('.menu-icon__item').toggleClass('menu-icon__item_toggle');
+			$('.menu').toggleClass('menu_toggle');
 		});
 	</script>
 
