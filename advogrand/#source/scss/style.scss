@@ -938,6 +938,49 @@ footer {
     }
 }
 
+.feedback-modal {
+    display: none;
+}
+
+.fb-modal {
+    background: #fff;
+    width: 685px;
+    text-align: left;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+
+    &-close {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        color: #777777;
+        transition: 0.21s all;
+
+        &:hover {
+            color: lighten($color: #777777, $amount: 30%)
+        }
+    }
+
+    .video {
+        width: 575px;
+        iframe {
+            width: 100%;
+        }
+    }
+
+    .feedback-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 30px 75px;
+    }
+}
+
 .cardServ {
     display: flex;
     justify-content: center;
@@ -1210,17 +1253,10 @@ footer {
         }
     }
 
-    .feedback-slider-item {
-        .feedback-one__img {
-            a {
-                width: 200px;
-            }
-        }
+    .feedback-slider-item .feedback-one {
+        margin-right: 15px;
     }
 
-    .feedback-slider-item .feedback-one {
-        margin-left: 22px;
-    }
 
     .tariff {
         padding-left: 10px;
@@ -1230,6 +1266,17 @@ footer {
         max-width: 100%;
         margin-bottom: 35px;
     }
+
+    .fb-modal {
+        width: 560px;
+        .video {
+            width: 575px;
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -1316,7 +1363,7 @@ footer {
     }
 
     .about {
-        
+
         padding: 60px 5px;
 
         &-head {
@@ -1374,12 +1421,31 @@ footer {
         width: 130px;
     }
 
-    .feedback-slider-nav{
-        display: none;
-    }
-
     .feedback-one {
         padding: 0 38px;
+    }
+
+    .feedback-slider-item {
+        .feedback-one__img {
+            a {
+                width: 220px;
+            }
+        }
+    }
+
+    .feedback-slider-nav {
+        ul {
+            li {
+                margin-right: 7px;
+                font-size: 9px;
+            }
+        }
+    }
+
+    .feedback-slider-nav {
+        ul {
+            padding-left: 0;
+        }
     }
 
     .feedback {
@@ -1390,29 +1456,35 @@ footer {
 
     .partners-item {
         img {
-             margin-top: 0;
+            margin-top: 0;
         }
     }
 
     .tariff {
         text-align: center;
+
         h2 {
             text-align: center;
             padding-left: 20%;
         }
+
         h3 {
             text-align: center;
         }
+
         &-info {
             padding: 0;
+
             ul {
                 padding: 0;
                 text-align: left;
+
                 li {
                     font-size: 12px;
                 }
             }
         }
+
         .price {
             .btn {
                 width: 280px;
@@ -1422,9 +1494,11 @@ footer {
 
     .contact-wrap {
         flex-direction: column;
+
         .contact-form {
             width: 100%;
         }
+
         .contact-info {
             width: 100%;
         }
@@ -1457,12 +1531,15 @@ footer {
 
     .recall {
         width: 270px;
-         .recall-content {
+
+        .recall-content {
             padding: 15px;
+
             h4 {
                 text-align: center;
                 margin-bottom: 15px;
             }
+
             input {
                 width: 240px;
             }
@@ -1473,9 +1550,25 @@ footer {
                 margin-bottom: 5px;
             }
         }
+
         &-close {
             font-size: 14px;
-            top: 2px;right: 2px;
+            top: 2px;
+            right: 2px;
+        }
+    }
+
+    .feedback-slider-nav ul li.active {
+        padding: 5px 4px;
+    }
+    .fb-modal {
+        width: 360px;
+        .video {
+            width: 350px;
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

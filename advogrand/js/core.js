@@ -9,7 +9,9 @@ $(document).ready(function () {
                 breakpoint: 992,
                 settings: {
                     arrows: false,
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    autoplay: true
+
                 }
             },
             {
@@ -17,8 +19,7 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 3000
+                    autoplay: true
                 }
             }
         ]
@@ -49,9 +50,7 @@ $(document).ready(function () {
                     settings: {
                         arrows: false,
                         slidesToShow: 2,
-                        autoplay: true,
-                        autoplaySpeed: 2000
-
+                        autoplay: true
                     }
                 },
                 {
@@ -76,7 +75,6 @@ $(document).ready(function () {
                     arrows: false,
                     slidesToShow: 3,
                     autoplay: true,
-                    autoplaySpeed: 4000
                 }
             },
             {
@@ -106,7 +104,6 @@ $(document).ready(function () {
 
 
     $('.recall-btn').on('click', function (e) {
-        console.log(this);
         e.preventDefault();
         $('.recall-modal').fadeIn();
     });
@@ -114,4 +111,16 @@ $(document).ready(function () {
         e.preventDefault();
         $('.recall-modal').fadeOut();
     });
+    
+    
+    $('.feedback-btn').on('click', function (e) {
+        e.preventDefault();
+        $('.feedback-modal').fadeIn();
+    });
+    $('.fb-modal-close').click(function (e) {
+        e.preventDefault();
+        $('.feedback-modal').fadeOut();
+    });
 });
+
+
